@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# Welcome to your Nagad Clone app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -42,9 +42,8 @@ To learn more about developing your project with Expo, look at the following res
 - [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
 - [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
+![WhatsApp Image 2025-06-14 at 14 16 38](https://github.com/user-attachments/assets/bc9be25f-1570-47a7-834c-fd09e1c6333b)
+![WhatsApp Image 2025-06-14 at 14 16 39 (1)](https://github.com/user-attachments/assets/3b88c74c-88e3-4e31-818d-275703e59add)
+![WhatsApp Image 2025-06-14 at 14 16 39](https://github.com/user-attachments/assets/e698f599-918c-4f97-b11f-247c3871d033)
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
