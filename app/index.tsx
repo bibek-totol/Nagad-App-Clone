@@ -13,17 +13,16 @@ export default function index() {
   return (
     
     <Stack.Navigator initialRouteName="Welcome">
-    {/* Initial Welcome Page */}
     <Stack.Screen
       name="Welcome"
       component={WelcomePage}
-      options={{ headerShown: false }} // Hides header for WelcomePage
+      options={{ headerShown: false }} 
     />
-    {/* After Button Click, Show Bottom Navigation */}
+  
     <Stack.Screen
       name="Home"
       component={BottomTabNavigator}
-      options={{ headerShown: false }} // Hides header for BottomTabNavigator
+      options={{ headerShown: false }} 
     />
   </Stack.Navigator>
   

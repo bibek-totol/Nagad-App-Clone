@@ -1,5 +1,7 @@
-import { View, Text, Image, Pressable } from 'react-native';
+import { View, Text, Image, Pressable, ScrollView } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import HomeBodyService from '@/components/HomeBodyService';
+import HomeBodyOthers from '@/components/HomeBodyOthers';
 
 export default function HomePage() {
   return (
@@ -32,6 +34,13 @@ export default function HomePage() {
     
       </View>
       
+      <ScrollView className='flex-1 p-2'>
+      <HomeBodyService />
+      <View className='px-4 mt-10'>
+     <Image className='mx-auto w-full ' source={require('../../assets/images/banner.png')} />
+     </View>
+     <HomeBodyOthers />
+      </ScrollView>
     </View>
   );
 }
