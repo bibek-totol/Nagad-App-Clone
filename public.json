@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "number": 1234567890,
+      "amount": 1000
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "number": 9876543210,
+      "amount": 2000
+    },
+    {
+      "id": 3,
+      "name": "Bob Smith",
+      "number": 5555555555,
+      "amount": 1500
+    }
+  ]
+  

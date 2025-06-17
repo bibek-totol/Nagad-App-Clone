@@ -1,18 +1,33 @@
-import { View, Text,Image } from "react-native";
+import { View, Text,Image, Pressable } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
+
+type RootStackParamList = {
+  SendMoney: undefined;
+}
+
+type WelcomePageNavigationProp = {
+  navigate: (screen: keyof RootStackParamList) => void;
+};
 
 export default function HomeBodyService() {
+
+  const navigation = useNavigation<WelcomePageNavigationProp>();
+
   return (
     <View>
       <Text className="text-[#f86c51] text-[15px] font-semibold  mt-4 mb-3 px-4">
         Service
       </Text>
       <View className="flex flex-row flex-wrap items-center   w-full px-4 gap-y-12  gap-x-2 relative ">
+        <Pressable onPress={() => navigation.navigate('SendMoney')}>
         <View className="w-[80px] h-[80px] bg-[#f86c51] rounded-lg flex justify-center items-center">
           <Text className="text-zinc-500 text-[12px] font-semibold absolute top-[80px] left-2">
             Send Money
           </Text>
           <Image  source={require("../assets/images/loan1.png")} />
         </View>
+        </Pressable>
         <View className="w-[80px] h-[80px] bg-[#f86c51] rounded-lg flex justify-center items-center">
           <Text className="text-zinc-500 text-[12px] font-semibold absolute top-[80px] left-2">
             Cash Out
