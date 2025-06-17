@@ -4,6 +4,9 @@ import WelcomePage from './homepage/welcome'
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomTabNavigator from '@/components/BottomTabNavigator'
 import SendMoney from './Send_Money/send_money';
+import send_money_2 from './Send_Money/send_money_2';
+import send_money_3 from './Send_Money/send_money_3';
+import send_money_4 from './Send_Money/send_money_4';
 
 
 const Stack = createStackNavigator();
@@ -27,6 +30,27 @@ export default function Index() {
       component={SendMoney}
       options={{ headerShown: false }} 
     />
+
+    <Stack.Screen
+
+      name="send_money_2"
+      component={send_money_2}
+      options={{ headerShown: false }}
+    />
+
+<Stack.Screen
+
+name="send_money_3"
+component={send_money_3}
+options={{ headerShown: false }}
+/>
+
+<Stack.Screen
+
+name="send_money_4"
+component={send_money_4}
+options={{ headerShown: false }}
+/>
   
     <Stack.Screen
       name="Home"

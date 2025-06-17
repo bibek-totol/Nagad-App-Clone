@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 
 
+
 interface Item{
     id: number,
     name: string,
@@ -12,9 +13,22 @@ interface Item{
     
 }
 
+
+type RootStackParamList = {
+  send_money_2: undefined;
+}
+
+
+type WelcomePageNavigationProp = {
+  navigate: (screen: keyof RootStackParamList) => void;
+  goBack: () => void;
+};
+
+
 const SendMoney = () => {
-  const navigation = useNavigation();
+
   const [data, setData] = useState([]);
+  const navigation = useNavigation<WelcomePageNavigationProp>();
 
   useEffect (()=>{
 
@@ -44,7 +58,9 @@ const SendMoney = () => {
           placeholder="Enter recipient's phone number"
           style={{ color: '#9e9e9e', borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 8, marginRight: 8, flex: 1 }}
         />
+        <Pressable onPress={() => navigation.navigate('send_money_2')}>
         <AntDesign name="arrowright" size={24} color="white" style={{ backgroundColor: '#f86c51', padding: 8, borderRadius: 50 }} />
+        </Pressable>
       </View>
       <Text style={{ padding: 12, fontSize: 14, color: '#9e9e9e' }}>
         Enter Name, 11-digit Mobile Number or 16-digit Virtual Card Number
