@@ -1,4 +1,4 @@
-# Welcome to your Nagad Clone app 👋
+# Welcome to your Nagad Clone app(Ongoing) 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -45,5 +45,7 @@ To learn more about developing your project with Expo, look at the following res
 ![WhatsApp Image 2025-06-14 at 14 16 38](https://github.com/user-attachments/assets/bc9be25f-1570-47a7-834c-fd09e1c6333b)
 ![WhatsApp Image 2025-06-14 at 14 16 39 (1)](https://github.com/user-attachments/assets/3b88c74c-88e3-4e31-818d-275703e59add)
 ![WhatsApp Image 2025-06-14 at 14 16 39](https://github.com/user-attachments/assets/e698f599-918c-4f97-b11f-247c3871d033)
+![WhatsApp Image 2025-06-17 at 20 11 12_0527acb5](https://github.com/user-attachments/assets/be3a6cf4-1ba2-4b89-97b7-451cf80cd7d2)
+
 
 
