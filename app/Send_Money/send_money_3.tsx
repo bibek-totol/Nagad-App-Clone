@@ -13,7 +13,7 @@ type WelcomePageNavigationProp = {
 };
 export default function Send_money_3() {
     const navigation = useNavigation<WelcomePageNavigationProp>();
-    const {everydata} = useEveryData();
+    const {everydata, setEverydata} = useEveryData();
     
   return (
     <View className='flex-1 items-center gap-y-7'>
@@ -90,7 +90,7 @@ export default function Send_money_3() {
   <TextInput
     className="h-12  text-lg w-4/5"
     style={{  borderBottomWidth: 2, borderBottomColor: "#000000" }}
-    
+    onChange={(e) => setEverydata({ ...everydata, reference: e.nativeEvent.text })}
     placeholder="Reference"
   />
 </View>

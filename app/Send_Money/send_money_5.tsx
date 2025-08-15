@@ -7,8 +7,6 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 
 
-
-
 type WelcomePageNavigationProp = {
   navigate: (screen: keyof RootStackParamList) => void;
   goBack: () => void;
@@ -25,6 +23,8 @@ export default function Send_money_5() {
       minute: "2-digit",
       hour12: true,
     });
+
+    
     
      return(
         <SafeAreaView className=" p-4 mt-40 ">
@@ -46,12 +46,13 @@ export default function Send_money_5() {
   
       
         <View className="mt-4 border-t border-gray-200 pt-4 px-8">
-          <DetailRow label="Transaction ID" value={Math.random().toString(26).substring(9)} />
+          <DetailRow label="Transaction ID" value={ "#" + Math.random().toString(36).substring(2, 11).toUpperCase()} />
           <DetailRow label="Amount" value={everydata?.amount as number} />
           <DetailRow label="Charge" value={everydata?.charge as number} />
           <DetailRow label="Total" value={everydata?.total as number} />
-          <DetailRow label="Remaining Balance" value={everydata?.balance as number} />
+          <DetailRow label="Remaining Balance" value={(everydata?.balance ?? 0) - (everydata?.total ?? 0)}/>
           <DetailRow label="Timestamp" value={timestamp} />
+          <DetailRow label="Reference" value={everydata?.reference as string} />
         </View>
 
   

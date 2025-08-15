@@ -1,4 +1,4 @@
-import { View, Text, Pressable, Image, TextInput} from "react-native";
+import { View, Text, Pressable, Image, TextInput, Alert } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "..";
@@ -14,6 +14,34 @@ type WelcomePageNavigationProp = {
 const Send_money_2 = () => {
   const navigation = useNavigation<WelcomePageNavigationProp>();
   const {everydata, setEverydata} = useEveryData();
+
+
+  const handleNext = () => {
+    const numericAmount = Number(everydata?.amount);
+
+    if(numericAmount === 0)
+    {
+      Alert.alert("You can not send money 0 টাকা");
+      return;
+    }
+
+    if (!numericAmount) {
+      Alert.alert("Validation Error", "Please enter an amount.");
+      return;
+    }
+
+    if (isNaN(numericAmount) || numericAmount <= 0) {
+      Alert.alert("Validation Error", "Please enter a valid positive number.");
+      return;
+    }
+    if (numericAmount > (everydata?.balance || 0)) {
+      Alert.alert("Validation Error", "Insufficient balance.");
+      return;
+    }
+
+
+    navigation.navigate("send_money_3");
+  };
   
 
   return (
@@ -85,7 +113,7 @@ const Send_money_2 = () => {
               }}
               
               style={{
-                color: "#9e9e9e",
+                color: "black",
                 borderWidth: 1,
                 borderColor: "#d1d5db",
                 borderRadius: 8,
@@ -97,7 +125,8 @@ const Send_money_2 = () => {
           <Text className="mt-24">
             Available Balance: <Text className="font-semibold">{everydata?.balance} টাকা</Text>
           </Text>
-          <Pressable onPress={() => navigation.navigate("send_money_3")}
+          <Pressable onPress={handleNext }
+          
             className="border-2  rounded-full mt-16"
             style={{
               borderColor: "#f86c51",
