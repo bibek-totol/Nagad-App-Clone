@@ -7,6 +7,7 @@ export default interface Item {
     amount?: number;
     charge?: number;
     total?: number;
+    reference?: string;
   }
 
   

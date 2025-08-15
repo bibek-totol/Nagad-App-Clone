@@ -30,7 +30,7 @@ export default function Send_money_4() {
 
   const handlePress = () => {
 
-    setEverydata({...everydata, balance: remain_balance, amount, charge, total});
+    setEverydata({...everydata,amount, charge, total});
     if(!isAnimating){
       setIsAnimating(true);
       setPercentages(100);

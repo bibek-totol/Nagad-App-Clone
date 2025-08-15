@@ -1,4 +1,4 @@
-import { FlatList, Pressable, Text, TextInput, View, Image } from 'react-native';
+import { FlatList, Pressable, Text, TextInput, View, Image,Alert,ActivityIndicator } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
 import { useState, useEffect } from 'react';
@@ -14,23 +14,39 @@ type WelcomePageNavigationProp = {
   goBack: () => void;
 };
 
-const fetchContact = async () => {
-  const response = await fetch('https://bibek-totol.github.io/API-of-Nagad-Clone-App/db.json');
-  if (!response.ok) {
-    throw new Error('Failed to fetch contacts list');
-  }
-  return response.json();
-};
+
+
 
 const SendMoney = () => {
   const {data, setData} =  useEveryData();
   const {everydata, setEverydata} = useEveryData();
   const navigation = useNavigation<WelcomePageNavigationProp>();
+  const [loading, setLoading ] = useState<boolean>(false);
 
   const handleData = (item: Item) => {
     setEverydata(item);
 
   
+  };
+
+
+  const nextfunction =()=>{
+
+    if (!everydata.phone) {
+      Alert.alert("Please Select Recipient Number");
+      return;
+    }
+
+    navigation.navigate("send_money_2");
+  }
+
+  const fetchContact = async () => {
+    setLoading(true);
+    const response = await fetch('https://bibek-totol.github.io/API-of-Nagad-Clone-App/db.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch contacts list');
+    }
+    return response.json();
   };
 
   useEffect(() => {
@@ -54,9 +70,10 @@ const SendMoney = () => {
       <View style={{ padding: 8, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
         <AntDesign name="phone" size={24} color="red" />
         <TextInput
-          placeholder="Enter recipient's phone number"
+          placeholder="Select recipient's phone number"
           placeholderTextColor="black"
           keyboardType='numeric'
+          readOnly
           maxLength={14}
           selectionColor={'#f86c51'}
           
@@ -64,7 +81,8 @@ const SendMoney = () => {
           value={everydata?.phone || ''}
           style={{ color: 'black', borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 8, marginRight: 8, flex: 1 }}
         />
-        <Pressable onPress={() => navigation.navigate('send_money_2')}>
+        <Pressable onPress={nextfunction}>
+    
           <AntDesign name="arrowright" size={24} color="white" style={{ backgroundColor: '#f86c51', padding: 8, borderRadius: 50 }} />
         </Pressable>
       </View>
