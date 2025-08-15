@@ -4,16 +4,14 @@ import { useNavigation } from "@react-navigation/native";
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 
 
-type RootStackParamList = {
-   send_money_5: undefined;
-}
+
 
 
 type WelcomePageNavigationProp = {
-  navigate: (screen: keyof RootStackParamList) => void;
+  navigate: (screen: keyof RootStac) => void;
   goBack: () => void;
 };
-export default function send_money_4() {
+export default function Send_money_4() {
     const navigation = useNavigation<WelcomePageNavigationProp>();
   return (
     <View className='flex-1 items-center gap-y-7'>

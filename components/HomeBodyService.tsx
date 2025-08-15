@@ -1,10 +1,9 @@
 import { View, Text,Image, Pressable } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from "@/app";
 
 
-type RootStackParamList = {
-  SendMoney: undefined;
-}
+
 
 type WelcomePageNavigationProp = {
   navigate: (screen: keyof RootStackParamList) => void;
@@ -20,7 +19,7 @@ export default function HomeBodyService() {
         Service
       </Text>
       <View className="flex flex-row flex-wrap items-center   w-full px-4 gap-y-12  gap-x-2 relative ">
-        <Pressable onPress={() => navigation.navigate('SendMoney')}>
+        <Pressable onPress={() => navigation.navigate('send_money')}>
         <View className="w-[80px] h-[80px] bg-[#f86c51] rounded-lg flex justify-center items-center">
           <Text className="text-zinc-500 text-[12px] font-semibold absolute top-[80px] left-2">
             Send Money
