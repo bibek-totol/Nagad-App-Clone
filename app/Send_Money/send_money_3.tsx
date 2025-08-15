@@ -1,7 +1,6 @@
 import { View, Text, Pressable, Image,TextInput } from 'react-native'
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, EvilIcons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
-import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { RootStackParamList } from '..';
 import { useEveryData } from '../context/EveryDataContext';
 
@@ -14,7 +13,7 @@ type WelcomePageNavigationProp = {
 };
 export default function Send_money_3() {
     const navigation = useNavigation<WelcomePageNavigationProp>();
-    const {everydata, setEverydata} = useEveryData();
+    const {everydata} = useEveryData();
     
   return (
     <View className='flex-1 items-center gap-y-7'>
