@@ -4,7 +4,9 @@ export default interface Item {
     phone?: string;
     balance?: number;
     image?: string;
-    amount?: number
+    amount?: number;
+    charge?: number;
+    total?: number;
   }
 
   
