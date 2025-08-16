@@ -39,14 +39,18 @@ To learn more about developing your project with Expo, look at the following res
 
 - [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
 
+# App UI:
 
-![WhatsApp Image 2025-06-14 at 14 16 38](https://github.com/user-attachments/assets/bc9be25f-1570-47a7-834c-fd09e1c6333b)
-![WhatsApp Image 2025-06-14 at 14 16 39 (1)](https://github.com/user-attachments/assets/3b88c74c-88e3-4e31-818d-275703e59add)
-![WhatsApp Image 2025-06-14 at 14 16 39](https://github.com/user-attachments/assets/e698f599-918c-4f97-b11f-247c3871d033)
-![WhatsApp Image 2025-06-17 at 20 11 12_0527acb5](https://github.com/user-attachments/assets/be3a6cf4-1ba2-4b89-97b7-451cf80cd7d2)
-![WhatsApp Image 2025-06-18 at 01 22 23_fb45f372](https://github.com/user-attachments/assets/1220044f-958a-43ef-803d-3b9efd860ecb)
-![WhatsApp Image 2025-06-18 at 01 22 23_a7e8f14e](https://github.com/user-attachments/assets/8a0cc103-66f9-4518-b605-8cf8c3b74219)
-![WhatsApp Image 2025-06-18 at 01 22 23_64cb85ee](https://github.com/user-attachments/assets/fd06e69f-75b9-4e32-ad88-63a6d564b8e4)
+![Image](https://github.com/user-attachments/assets/4ba8871f-9699-4153-874a-7fd47b64874b)
+![Image](https://github.com/user-attachments/assets/2edbafa1-0a03-4b66-8231-8da95d427db1)
+![Image](https://github.com/user-attachments/assets/dcbc26d7-108d-49f8-b6a4-4fc7626b4ff0)
+![Image](https://github.com/user-attachments/assets/724534a4-7468-46db-947d-d9b72da9c2ab)
+![Image](https://github.com/user-attachments/assets/415128e8-2907-4a0f-95dc-1a2c2d43168e)
+![Image](https://github.com/user-attachments/assets/e68dd744-406a-43cb-a949-26503972bf78)
+![Image](https://github.com/user-attachments/assets/e3ad2022-2f36-475b-835a-f1fa74a8aa9e)
+
+
+
 
 
 
