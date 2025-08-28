@@ -28,9 +28,9 @@ export default function WelcomePage() {
       <View className="flex-1 items-center gap-y-10 mt-80">
         <Image source={require('../../assets/images/Group 6.png')} />
 
-        {/* Button to navigate to Home with Bottom Tab Navigation */}
+      
         <Pressable
-          onPress={() => navigation.navigate('Home')} // Correct type-safe navigation
+          onPress={() => navigation.navigate('Home')}
           className="bg-white px-6 py-3 rounded-full"
         >
           <Text className="text-black text-lg font-semibold">Get Started</Text>

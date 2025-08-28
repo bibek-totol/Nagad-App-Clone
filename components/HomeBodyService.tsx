@@ -33,12 +33,16 @@ export default function HomeBodyService() {
           </Text>
           <Image  source={require("../assets/images/Group 41.png")} />
         </View>
+
+        <Pressable onPress={() => navigation.navigate('Mobile_Recharge1')}>
         <View className="w-[80px] h-[80px] bg-[#f86c51] rounded-lg flex justify-center items-center">
           <Text className="text-zinc-500 text-[12px] font-semibold absolute top-[80px] left-2">
             Mobile Recharge
           </Text>
           <Image  source={require("../assets/images/recharge 1.png")} />
         </View>
+        </Pressable>
+
         <View className="w-[80px] h-[80px] bg-[#f86c51] rounded-lg flex justify-center items-center">
           <Text className="text-zinc-500 text-[12px] font-semibold absolute top-[80px] left-2">
             Add Money
