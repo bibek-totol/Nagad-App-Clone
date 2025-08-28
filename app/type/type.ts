@@ -8,6 +8,9 @@ export default interface Item {
     charge?: number;
     total?: number;
     reference?: string;
+    logo?: string;
+    operator?: string;
+
   }
 
   

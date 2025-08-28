@@ -9,6 +9,9 @@ import Send_money_4 from './Send_Money/send_money_4';
 import Send_money_5 from './Send_Money/send_money_5';
 import { EveryDataProvider } from './context/EveryDataContext';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Mobile_Recharge1 from './Mobile_Recharge/Mobile_Recharge1';
+import Mobile_Recharge2 from './Mobile_Recharge/Mobile_Recharge2';
+import Mobile_Recharge3 from './Mobile_Recharge/Mobile_Recharge3';
 
 export  type RootStackParamList = {
   send_money: undefined;
@@ -18,6 +21,9 @@ export  type RootStackParamList = {
   send_money_5: undefined;
   Home: undefined;
   Welcome: undefined;
+  Mobile_Recharge1: undefined;
+  Mobile_Recharge2: undefined;
+  Mobile_Recharge3: undefined;
   
 };
 
@@ -77,6 +83,31 @@ options={{ headerShown: false }}
       component={BottomTabNavigator}
       options={{ headerShown: false }} 
     />
+
+
+<Stack.Screen
+
+name="Mobile_Recharge1"
+component={Mobile_Recharge1}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="Mobile_Recharge2"
+component={Mobile_Recharge2}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="Mobile_Recharge3"
+component={Mobile_Recharge3}
+options={{ headerShown: false }}
+/>
+
   </Stack.Navigator>
   </EveryDataProvider>
   

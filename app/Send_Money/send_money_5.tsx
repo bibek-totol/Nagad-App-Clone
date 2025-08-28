@@ -13,7 +13,7 @@ type WelcomePageNavigationProp = {
 };
 export default function Send_money_5() {
     const navigation = useNavigation<WelcomePageNavigationProp>();
-    const { everydata } = useEveryData();
+    const { everydata, setEverydata } = useEveryData();
     const currentDate = new Date();
     const timestamp = currentDate.toLocaleString("en-GB", {
       day: "2-digit",
@@ -57,7 +57,10 @@ export default function Send_money_5() {
 
   
        
-        <TouchableOpacity onPress={() => navigation.navigate("Home")} className="bg-red-500 py-3 rounded-full mt-14">
+        <TouchableOpacity onPress={() => {
+  navigation.navigate("Home");
+  setEverydata( {}); 
+}} className="bg-red-500 py-3 rounded-full mt-14">
           <Text className="text-white text-center font-semibold">
             Back To Home
           </Text>
