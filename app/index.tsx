@@ -12,6 +12,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Mobile_Recharge1 from './Mobile_Recharge/Mobile_Recharge1';
 import Mobile_Recharge2 from './Mobile_Recharge/Mobile_Recharge2';
 import Mobile_Recharge3 from './Mobile_Recharge/Mobile_Recharge3';
+import FirstPage from './Login_Pages/FirstPage';
+import SecondPage from './Login_Pages/SecondPage';
+import ThirdPage from './Login_Pages/ThirdPage';
+import FourthPage from './Login_Pages/FoutrthPage';
+import FifthPage from './Login_Pages/FifthPage';
 
 export  type RootStackParamList = {
   send_money: undefined;
@@ -24,6 +29,11 @@ export  type RootStackParamList = {
   Mobile_Recharge1: undefined;
   Mobile_Recharge2: undefined;
   Mobile_Recharge3: undefined;
+  FirstPage: undefined;
+  SecondPage: undefined;
+  ThirdPage: undefined;
+  FoutrthPage: undefined;
+  FifthPage: undefined;
   
 };
 
@@ -101,12 +111,53 @@ options={{ headerShown: false }}
 />
 
 
-<Stack.Screen
+    <Stack.Screen
 
 name="Mobile_Recharge3"
 component={Mobile_Recharge3}
 options={{ headerShown: false }}
 />
+
+
+<Stack.Screen
+
+name="FirstPage"
+component={FirstPage}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="SecondPage"
+component={SecondPage}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="ThirdPage"
+component={ThirdPage}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="FoutrthPage"
+component={FourthPage}
+options={{ headerShown: false }}
+/>
+
+
+<Stack.Screen
+
+name="FifthPage"
+component={FifthPage}
+options={{ headerShown: false }}
+/>
+
 
   </Stack.Navigator>
   </EveryDataProvider>
