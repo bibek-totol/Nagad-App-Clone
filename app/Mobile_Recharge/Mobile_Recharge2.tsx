@@ -96,7 +96,7 @@ export default function Mobile_Recharge2() {
       
       <View style={{ backgroundColor: '#f86c51', width: '100%', height: '16%', flexDirection: 'row', alignItems: 'center', gap: 7 }}>
       <Pressable onPress={() => navigation.goBack()}>
-        <AntDesign name="arrowleft" size={24} color="white" style={{ marginLeft: 10 }} />
+      <AntDesign name="arrow-left" size={24} color="white" style={{ marginLeft: 10 }} />
       </Pressable>
       <Text style={{ fontSize: 24, color: 'white', fontWeight: '600', flex: 1, textAlign: 'center' }}>Mobile Recharge</Text>
     </View>

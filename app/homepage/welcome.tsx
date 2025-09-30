@@ -30,7 +30,7 @@ export default function WelcomePage() {
 
       
         <Pressable
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('FirstPage')}
           className="bg-white px-6 py-3 rounded-full"
         >
           <Text className="text-black text-lg font-semibold">Get Started</Text>

@@ -58,7 +58,7 @@ const Send_money_2 = () => {
       >
         <Pressable onPress={() => navigation.goBack()}>
           <AntDesign
-            name="arrowleft"
+            name="arrow-left"
             size={24}
             color="white"
             style={{ marginLeft: 10 }}

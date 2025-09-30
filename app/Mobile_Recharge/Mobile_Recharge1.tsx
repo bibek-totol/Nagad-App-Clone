@@ -69,7 +69,7 @@ export default function Mobile_Recharge1() {
     
     <View style={{ backgroundColor: '#f86c51', width: '100%', height: '16%', flexDirection: 'row', alignItems: 'center', gap: 7 }}>
       <Pressable onPress={() => navigation.goBack()}>
-        <AntDesign name="arrowleft" size={24} color="white" style={{ marginLeft: 10 }} />
+      <AntDesign name="arrow-left" size={24} color="white" style={{ marginLeft: 10 }} />
       </Pressable>
       <Text style={{ fontSize: 24, color: 'white', fontWeight: '600', flex: 1, textAlign: 'center' }}>Mobile Recharge</Text>
     </View>
@@ -92,7 +92,7 @@ export default function Mobile_Recharge1() {
       />
       <Pressable onPress={nextfunction}>
   
-        <AntDesign name="arrowright" size={24} color="white" style={{ backgroundColor: '#f86c51', padding: 8, borderRadius: 50 }} />
+        <AntDesign name="arrow-right" size={24} color="white" style={{ backgroundColor: '#f86c51', padding: 8, borderRadius: 50 }} />
       </Pressable>
     </View>
     <Text style={{ padding: 12, fontSize: 14, color: '#9e9e9e' }}>
