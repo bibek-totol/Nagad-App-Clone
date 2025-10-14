@@ -16,22 +16,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
 ## Learn more
 
@@ -43,6 +28,11 @@ To learn more about developing your project with Expo, look at the following res
 
 # Send Money
 ![Image](https://github.com/user-attachments/assets/4ba8871f-9699-4153-874a-7fd47b64874b)
+![Image](https://github.com/user-attachments/assets/2624de89-5b34-490f-9073-13a9d64ec298)
+
+![Image](https://github.com/user-attachments/assets/2173af1d-1640-448c-b24c-049da2741707)
+
+![Image](https://github.com/user-attachments/assets/ac9920f3-05ed-4fbf-a8b3-8febcc1ddf69)
 ![Image](https://github.com/user-attachments/assets/2edbafa1-0a03-4b66-8231-8da95d427db1)
 ![Image](https://github.com/user-attachments/assets/dcbc26d7-108d-49f8-b6a4-4fc7626b4ff0)
 ![Image](https://github.com/user-attachments/assets/724534a4-7468-46db-947d-d9b72da9c2ab)
