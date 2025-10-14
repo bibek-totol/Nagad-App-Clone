@@ -43,6 +43,11 @@ To learn more about developing your project with Expo, look at the following res
 
 # Send Money
 ![Image](https://github.com/user-attachments/assets/4ba8871f-9699-4153-874a-7fd47b64874b)
+![Image](https://github.com/user-attachments/assets/2624de89-5b34-490f-9073-13a9d64ec298)
+
+![Image](https://github.com/user-attachments/assets/2173af1d-1640-448c-b24c-049da2741707)
+
+![Image](https://github.com/user-attachments/assets/ac9920f3-05ed-4fbf-a8b3-8febcc1ddf69)
 ![Image](https://github.com/user-attachments/assets/2edbafa1-0a03-4b66-8231-8da95d427db1)
 ![Image](https://github.com/user-attachments/assets/dcbc26d7-108d-49f8-b6a4-4fc7626b4ff0)
 ![Image](https://github.com/user-attachments/assets/724534a4-7468-46db-947d-d9b72da9c2ab)
