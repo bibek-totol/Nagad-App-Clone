@@ -2,7 +2,7 @@ import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Checkbox from "expo-checkbox";
 import React, { useState } from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { RootStackParamList } from "..";
 
 type RegisterNavigationProp = {
@@ -14,8 +14,8 @@ export default function Register3() {
   const navigation = useNavigation<RegisterNavigationProp>();
   const [sameAddress, setSameAddress] = useState(true);
 
-  // Mock data (You can replace this with scanned data or API response)
-  const scannedData = {
+  
+  const [formData, setFormData] = useState({
     nidNumber: "1234567890123",
     applicantName: "Mashrafe Bin Mortaza",
     fatherName: "Rahim Uddin",
@@ -23,6 +23,10 @@ export default function Register3() {
     dob: "02/02/1980",
     presentAddress: "Boalia, Adda, Barura, Cumilla",
     permanentAddress: "Boalia, Adda, Barura, Cumilla",
+  });
+
+  const handleChange = (field: string, value: string) => {
+    setFormData({ ...formData, [field]: value });
   };
 
   return (
@@ -38,73 +42,87 @@ export default function Register3() {
       </View>
 
       <ScrollView
-        contentContainerStyle={{ paddingBottom: 30 }}
-        className="px-5 mt-4"
+        contentContainerStyle={{ paddingBottom: 40 }}
+        className="px-5 mt-2"
       >
-        {/* Data Field */}
-        <View className="mb-4 p-4">
+        {/* Reusable Input Field */}
+        <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">NID Number</Text>
-          <Text className="text-base font-semibold">
-            {scannedData.nidNumber}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.nidNumber}
+            onChangeText={(text) => handleChange("nidNumber", text)}
+            keyboardType="numeric"
+          />
         </View>
 
-        <View className="mb-4 p-4">
+        <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">Applicant's Name</Text>
-          <Text className="text-base font-semibold">
-            {scannedData.applicantName}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.applicantName}
+            onChangeText={(text) => handleChange("applicantName", text)}
+          />
         </View>
 
-        <View className="mb-4 p-4">
-          <Text className="text-xs text-gray-500 mb-1">
-            Applicant's Father's Name
-          </Text>
-          <Text className="text-base font-semibold">
-            {scannedData.fatherName}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+        <View className="mb-2 p-4">
+          <Text className="text-xs text-gray-500 mb-1">Applicant's Father's Name</Text>
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.fatherName}
+            onChangeText={(text) => handleChange("fatherName", text)}
+          />
         </View>
 
-        <View className="mb-4 p-4">
-          <Text className="text-xs text-gray-500 mb-1">
-            Applicant's Mother's Name
-          </Text>
-          <Text className="text-base font-semibold">
-            {scannedData.motherName}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+        <View className="mb-2 p-4">
+          <Text className="text-xs text-gray-500 mb-1">Applicant's Mother's Name</Text>
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.motherName}
+            onChangeText={(text) => handleChange("motherName", text)}
+          />
         </View>
 
-        <View className="mb-4 p-4">
+        <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">Date of Birth</Text>
-          <Text className="text-base font-semibold">{scannedData.dob}</Text>
-          <View className="border-b border-gray-300 mt-1" />
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.dob}
+            onChangeText={(text) => handleChange("dob", text)}
+            placeholder="DD/MM/YYYY"
+          />
         </View>
 
-        <View className="mb-4 p-4">
+        <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">Present Address</Text>
-          <Text className="text-base font-semibold">
-            {scannedData.presentAddress}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.presentAddress}
+            onChangeText={(text) => handleChange("presentAddress", text)}
+            multiline
+          />
         </View>
 
-        <View className="mb-4 p-4">
+        <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">Permanent Address</Text>
-          <Text className="text-base font-semibold">
-            {scannedData.permanentAddress}
-          </Text>
-          <View className="border-b border-gray-300 mt-1" />
+          <TextInput
+            className="border-b border-gray-300 text-base pb-1"
+            value={formData.permanentAddress}
+            onChangeText={(text) => handleChange("permanentAddress", text)}
+            multiline
+          />
         </View>
 
         {/* Checkbox */}
         <View className="flex-row items-center mt-2">
           <Checkbox
             value={sameAddress}
-            onValueChange={setSameAddress}
+            onValueChange={(value) => {
+              setSameAddress(value);
+              if (value) {
+                handleChange("permanentAddress", formData.presentAddress);
+              }
+            }}
             color={sameAddress ? "#DC2626" : undefined}
           />
           <Text className="ml-2 text-sm">Same as present address</Text>
