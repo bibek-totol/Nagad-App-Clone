@@ -9,7 +9,7 @@ import {
   Pressable
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "..";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -18,7 +18,10 @@ type WelcomePageNavigationProp = {
     goBack: () => void;
   };
 
-export default function ThirdPage() {
+export default function ThirdPge() {
+
+   const route = useRoute<any>();
+  const phone = route.params?.phone;
   const navigation = useNavigation<WelcomePageNavigationProp>();
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
 
@@ -28,10 +31,34 @@ export default function ThirdPage() {
     setOtp(newOtp);
   };
 
+
+
+  const handleVerifyOtp = async () => {
+
+  try {
+    const response = await fetch("http://192.168.0.104:4000/auth/verify-otp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone, otp }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      navigation.navigate("Home"); 
+    } else {
+      alert(data.message || "Invalid OTP");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong");
+  }
+};
+
+
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
     <View className="flex-1 bg-white min-h-screen">
-    <SafeAreaView >
+    
     
       <View
         style={{
@@ -40,7 +67,7 @@ export default function ThirdPage() {
           height: "16%",
           flexDirection: "row",
           alignItems: "center",
-          gap: 7,
+        
         }}
       >
         <Pressable onPress={() => navigation.goBack()}>
@@ -60,7 +87,7 @@ export default function ThirdPage() {
             textAlign: "center",
           }}
         >
-          Send Money
+          Verify OTP
         </Text>
       </View>
 
@@ -106,6 +133,7 @@ export default function ThirdPage() {
           
           <TouchableOpacity
             className="w-11/12 border border-red-500 py-3 rounded-full mt-8"
+            onPress={handleVerifyOtp}
           >
             <Text className="text-center text-red-500 text-base font-semibold">
               VERIFY
@@ -136,7 +164,7 @@ export default function ThirdPage() {
             </Text>
           </View>
         </View>
-        </SafeAreaView>
+        
     </View>
       </ScrollView>
     

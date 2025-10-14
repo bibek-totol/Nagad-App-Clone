@@ -93,7 +93,9 @@ export default function FirstPage() {
         
           <Text className="text-gray-500 mt-3">
             Not registered yet?{" "}
-            <Text className="text-red-600 font-semibold">Register Now</Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Register1")}>
+              <Text className="text-red-600 font-semibold">Register Now</Text>
+            </TouchableOpacity>
           </Text>
         </View>
 
