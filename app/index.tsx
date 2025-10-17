@@ -19,6 +19,8 @@ import Send_money_4 from "./Send_Money/send_money_4";
 import Send_money_5 from "./Send_Money/send_money_5";
 import { EveryDataProvider } from "./context/EveryDataContext";
 import WelcomePage from "./homepage/welcome";
+import Register6 from "./Register_Pages/Register6";
+import Register7 from "./Register_Pages/Register7";
 
 export type RootStackParamList = {
   send_money: undefined;
@@ -39,6 +41,8 @@ export type RootStackParamList = {
   Register3: undefined;
   Register4: undefined;
   Register5: undefined;
+  Register6: undefined;
+  Register7: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -154,7 +158,24 @@ export default function Index() {
           component={Register5}
           options={{ headerShown: false }}
         />
+  
+
+
+       <Stack.Screen
+          name="Register6"
+          component={Register6}
+          options={{ headerShown: false }}
+        />
+
+       <Stack.Screen
+          name="Register7"
+          component={Register7}
+          options={{ headerShown: false }}
+        />
+      
       </Stack.Navigator>
+
+
     </EveryDataProvider>
   );
 }

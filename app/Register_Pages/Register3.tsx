@@ -45,7 +45,7 @@ export default function Register3() {
         contentContainerStyle={{ paddingBottom: 40 }}
         className="px-5 mt-2"
       >
-        {/* Reusable Input Field */}
+       
         <View className="mb-2 p-4">
           <Text className="text-xs text-gray-500 mb-1">NID Number</Text>
           <TextInput
@@ -113,7 +113,7 @@ export default function Register3() {
           />
         </View>
 
-        {/* Checkbox */}
+     
         <View className="flex-row items-center mt-2">
           <Checkbox
             value={sameAddress}
@@ -127,6 +127,19 @@ export default function Register3() {
           />
           <Text className="ml-2 text-sm">Same as present address</Text>
         </View>
+
+
+         <TouchableOpacity
+                  className="bg-red-600 rounded-full py-3  mt-10"
+                  onPress={() => {
+                    navigation.navigate("Register4");
+                   
+                  }}
+                >
+                  <Text className="text-white text-center font-semibold text-base">
+                    NEXT
+                  </Text>
+                </TouchableOpacity>
       </ScrollView>
     </View>
   );

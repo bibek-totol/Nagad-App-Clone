@@ -35,7 +35,7 @@ export default function Register2() {
       </View>
 
       <ScrollView contentContainerStyle={{ flexGrow: 1 }} className="px-6">
-        {/* Tower Icon */}
+       
         <View className="items-center mt-10">
           <Image
             source={towerImage}
@@ -44,7 +44,7 @@ export default function Register2() {
           />
         </View>
 
-        {/* Title */}
+      
         <Text className="text-center text-lg font-semibold mb-1">
           Mobile Operator
         </Text>
@@ -52,7 +52,7 @@ export default function Register2() {
           Select your current mobile network operator
         </Text>
 
-        {/* Radio Buttons */}
+       
         <View className="gap-3 mt-24 mx-auto">
           {operators.map((op) => (
             <TouchableOpacity
@@ -78,12 +78,12 @@ export default function Register2() {
           ))}
         </View>
 
-        {/* Next Button */}
+       
         <TouchableOpacity
           className="bg-red-600 rounded-full py-3 mt-auto mb-10"
           onPress={() => {
             if (selectedOperator) {
-              // You can navigate or save selected operator here
+             
               console.log("Selected:", selectedOperator);
             }
             navigation.navigate("Register3");
